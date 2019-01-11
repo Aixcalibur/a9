@@ -2,39 +2,43 @@
 
     input[id^="spoiler"]{
         display: none;
-        opacity:0;
+        opacity: 0;
+        position: absolute;
+        visibility: hidden
+        left:-9999px;
     }
 
     input[id^="spoiler"] + label {
-        display: block;
-        width: 200px;
+        position: absolute;
+        left:0px;
+        width: 100%;
         margin: 0 auto;
         padding: 5px 20px;
-        background: #e1a;
+        background: #000;
         color: #fff;
-        text-align: center;
+        text-align: left;
         font-size: 24px;
-        border-radius: 8px;
         cursor: pointer;
         transition: all .6s;
     }
 
     input[id^="spoiler"]:checked + label {
-        color: #333;
-        background: #ccc;
+        /* color: #333;
+        background: #ccc; */
     }
 
     input[id^="spoiler"] ~ .spoiler {
-        width: 90%;
+        position: absolute;
+        left: 0px;
+        width: 100%;
         height: 0;
         overflow: hidden;
         opacity: 0;
-        margin: 10px auto 0; 
+        margin: 20px 0px; 
         padding: 10px; 
         background: #eee;
         border: 1px solid #ccc;
-        border-radius: 8px;
-        transition: all .6s;
+        /*transition: all .6s;*/
     }
     
     input[id^="spoiler"]:checked + label + .spoiler{
